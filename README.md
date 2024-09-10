@@ -1,37 +1,160 @@
-# MDP REPRESENTATION
+
+ MDP REPRESENTATION
+EX-01 MDP REPRESENTATION
 
 ## AIM:
 Write your aim here
+AIM:
 
 ## PROBLEM STATEMENT:
+To represent a Markov Decision Process(MDP) problem in the following ways:
 
 ### Problem Description
 Write your answer here
+Text representation
 
 ### State Space
 Write your answer here
+Graphical representation
 
 ### Sample State
 Write your answer here
+Python - Dictonary representation
 
 ### Action Space
 Write your answer here
+PROBLEM STATEMENT:
 
 ### Sample Action
 Write your answer here
+A toddler is learning to walk. The toddler starts out by crawling, and then eventually learns to stand up and walk. The toddler must learn to balance itself and take steps, while also avoiding obstacles.
+Problem Description
 
 ### Reward Function
 Write your answer here
+The toddler has to reach the goal state(moving forward to target) by taking the correct step towards the goal without hitting any obstacles or losing balance. After reaching the goal the toddler will be rewarded if not then no reward will be provided.
 
 ### Graphical Representation
 Write your answer here
+State Space :
 
 ## PYTHON REPRESENTATION:
 Write your code here
+{S,B,G,O}->{0,1,2,3
 
 ## OUTPUT:
 Write your Python output here
+0-> Starting point (S)
+
+1-> Balanced walking (B)
+
+2-> Targeted point (G)
 
 ## RESULT:
 Write your output here
+3-> Dashed onto obstacle (O)
 
+Sample State
+
+B-> 1-> Balanced walking
+
+Action Space
+
+{W,C}->{1,2}
+
+W-> Walking
+
+C-> Crawling
+
+Sample Action
+
+W-> 1-> Walking
+
+C-> 2-> Crawling
+
+Reward Function
+
+R =
+
+{
+    +1, if : the toddler comes to the targeted point
+
+    0, else : no reward
+}
+
+Graphical Representation
+
+![ex 1](https://github.com/user-attachments/assets/1e16eba5-ef83-45c4-99de-8f4659a9fedb)
+
+PYTHON REPRESENTATION:
+
+DEVLOPED BY : MAHALAKSHMI K
+
+REG NO. : 21222240057
+
+Toddler =
+
+{ 
+
+
+    # Starting point state (S) -> 0
+
+    # Action: Walking (W) -> 1, Crawling (C) -> 2
+
+  0:
+
+  {
+
+     1:[(0.82 , 1 , 0,False),(0.18 , 0 , 0 , False)],
+     
+     2:[(0.88 , 0 , 0,False),(0.12 , 1 , 0 , False)]
+
+  },
+
+    # Balanced walking state (B) -> 1
+
+  1:
+
+  {
+     1:[(0.91 , 2 , 0,False),(0.09 , 0 , 0 , False)],
+
+     2:[(0.75 , 0 , 0,False),(0.25 , 2 , 0 , False)]
+
+  },
+
+    # Targeted point state (G) -> 2
+
+  2:
+
+  {
+
+      1:[(0.92 , 3 , 1,True),(0.08 , 1 , 0 , False)],
+      
+      2:[(0.91 , 1 , 0,False),(0.09 , 3 , 1 , True)]
+
+  },
+
+    # Dashed onto obstacle state (O) -> 3
+
+  3:
+
+  {
+
+      1:[(0.82, 3 , 0, True),(0.18 , 2 , 0 , False)],
+      
+      2:[(0.73, 2 , 0, False),(0.27 , 3 , 0 , True)]
+
+  }
+
+}
+
+Toddler
+
+OUTPUT:
+
+![OUT](https://github.com/user-attachments/assets/ff6a76eb-e077-49e1-acac-50d54be94b28)
+
+
+RESULT:
+
+Thus, to represent a Markov Decision Process (MDP) problem in the representation of text, graphical and also by python program by displaying an appropriate dictionary for the above mentioned problem is implemented and executed successfully.
